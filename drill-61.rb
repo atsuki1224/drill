@@ -12,13 +12,13 @@
 # parrot_trouble(false, 7) → OK
 
 def parot_trouble(talking, hour)
-  if (talking == true) && (hour == 7..19)
+  if (talking == true) && (7..19).cover?(hour)
     puts "OK"
   else
     puts "NG"
   end
 end
 
-talking = false
-hour = 7
+talking = true
+hour = 10
 parot_trouble(talking, hour)
